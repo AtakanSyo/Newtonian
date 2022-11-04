@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+
+      body {
+        margin:  0px;
+        padding-top: 30px;
+        background-color: black;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+    .upper-button {
+        background-color: rgba(0,0,0);
+        color: white;
+        font-family: "Helvetica Neue";
+        font-weight: 200;
+        border-radius: 22px;
+        font-size: 16px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+        transition-duration: 0.3s;
+        margin: 12px;
+        padding: 1em;
+    }
+
+    .upper-button-symbol {
+      padding: 0.5em;
+    }
+
+    .upper-button:active {
+      background-color: white;
+    }
+
+/*    .active-button {
+      background-color: rgb(232,232,232);
+      color:  black;
+    }*/
+
+    .active-button {
+        background-color: rgb(232, 232, 232);
+        color: black;
+        font-weight: 100;
+    }
+
+    .active-button img {
+        filter: invert(0%) !important;
+    }
+
+    .upper-div{
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .upper-div button img {
+      width: 5vw;
+      max-width: 50px;
+      min-width: 40px;
+      filter: invert(100%);
+    }
+
+
+    .meteor-button{
+      width: 10px;
+      height: 10px;
+      background-color: rgba(0,0,0,0);
+      border-style: solid;
+      border-color: white;
+      border-width: 1px;
+      border-radius: 1000px;
+      margin: 8px;
+      padding: 0px;
+    }
+
+    .meteor-button-active {
+      background-color: white;
+      border-width: 0px;
+    }
+
+    .Tool-Explanation {
+      color:  white;
+      font-family: "Helvetica";
+      font-weight: 100;
+      text-align: center;
+      line-height: 1.5em;
+    }
+
+    .unclickable {
+      color:  rgb(62,62,62);
+      pointer-events: none;
+      border-color: rgb(62,62,62);
+    }
+
+    .control-div {
+      position: fixed;
+      top: 20%;
+      left: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    </style>
+  </head>
+    <div class="upper-div"><p class="Tool-Explanation">This is a simulation for Newtonian mechanics, in two dimensional space, abiding to Newton's laws of motion.<br>Every pixel is considered to be 1 meter.<br>The central mass is 20kg, and the meteors are 2kg.<br></p></div>
+    <div class="upper-div">
+      <div class="control-div">
+        <button onclick="permanent()" class="upper-button upper-button-symbol" id="perm-button"><img src="permanent.png" /></button>
+        <button onclick="clearMeteors()" class="upper-button">Clear</button>
+        <button onclick="kepler()" class="upper-button unclickable" id="kepler-button">Kepler</button>
+        <button class="meteor-button"></button>
+        <button class="meteor-button"></button>
+        <button class="meteor-button"></button>
+        <button class="meteor-button"></button>
+        <button class="meteor-button"></button>
+      </div>
+    </div>
+  <body>
+    <main>
+    </main>
+  </body>
+</html>
